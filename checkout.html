@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso de Desenvolvedor Front-End. Aprenda HTML, CSS, JavaScript e frameworks modernos.">
+    <meta name="keywords" content="Curso Front-End, HTML, CSS, JavaScript, React, Angular, Vue.js">
+    <meta name="author" content="Stanley Sampaio Falcao">
+    <title>Curso de Desenvolvedor Front-End</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #013220);
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1, header p {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            background: linear-gradient(to right, #00ff00, #013220);
+            background-clip: border-box;
+            background-clip: text;
+            -webkit-background-clip: border-box;
+            background-clip: text;
+            background-clip: text;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .checkout-form {
+            background-color: #013220;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 2rem auto;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .checkout-form h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #00ff00, #013220);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #00ff00, #013220);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            background-color: #000;
+            color: white;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #888;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #00cc00;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #00cc00;
+        }
+
+        .checkout-form .divider {
+            border-top: 1px solid #00ff00;
+            margin: 2rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #000;
+            color: #00ff00;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .checkout-form {
+                padding: 1.5rem;
+                max-width: 90%;
+            }
+
+            .form-group input {
+                padding: 0.7rem;
+                font-size: 0.9rem;
+            }
+
+            button[type="submit"] {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .checkout-form {
+                padding: 1rem;
+            }
+
+            .form-group input {
+                padding: 0.3rem;
+                font-size: 0.8rem;
+            }
+
+            button[type="submit"] {
+                font-size: 0.9rem;
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Finalizar Compra</h1>
+        <p>Complete as informações abaixo para garantir sua vaga no curso!</p>
+    </header>
+
+    <div class="container">
+        <section class="checkout-form">
+            <h2>Informações Pessoais</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone" required>
+                </div>
+
+                <div class="divider"></div>
+
+                <h2>Informações de Pagamento</h2>
+                <div class="form-group">
+                    <label for="card-number">Número do Cartão</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Digite o número do cartão" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nome no Cartão</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Digite o nome como está no cartão" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Data de Validade</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="Código de segurança" required>
+                </div>
+
+                <button type="submit" class="button">Finalizar Compra</button>
+            </form>
+        </section>
+        <div id="plano-selecionado" style="text-align: center; font-size: 1.5rem; color: #00ff00; margin-top: 1rem;"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Curso de Desenvolvedor Front-End. Todos os direitos reservados autoria de stanley sampaio falcao.</p>
+    </footer>
+
+    <script>
+     
+    </script>
+</body>
+</html>
