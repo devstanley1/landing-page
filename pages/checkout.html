@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta Tags Básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <meta name="description" content="Finalize sua compra do Curso de Desenvolvedor Front-End. Aprenda HTML, CSS, JavaScript e frameworks modernos.">
+    <meta name="keywords" content="Curso Front-End, Checkout, Comprar Curso">
+    <meta name="author" content="Stanley Sampaio Falcao">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Checkout - Curso de Desenvolvedor Front-End</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Finalizar Compra</h1>
+        <p>Complete as informações abaixo para garantir sua vaga no curso!</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Exibição do Plano Selecionado -->
+        <div id="plano-selecionado" aria-live="polite"></div>
+
+        <!-- Formulário de Checkout -->
+        <section class="checkout-form">
+            <h2>Informações Pessoais</h2>
+            <form action="#" method="POST" novalidate>
+                <!-- Dados Pessoais -->
+                <div class="form-group">
+                    <label for="name">Nome Completo <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Digite seu nome completo" 
+                        required 
+                        autocomplete="name"
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Digite seu e-mail" 
+                        required 
+                        autocomplete="email"
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="(00) 00000-0000" 
+                        required 
+                        autocomplete="tel"
+                        aria-required="true"
+                    >
+                </div>
+
+                <!-- Divider -->
+                <div class="divider" role="separator" aria-hidden="true"></div>
+
+                <!-- Dados de Pagamento -->
+                <h2>Informações de Pagamento</h2>
+                
+                <div class="form-group">
+                    <label for="card-number">Número do Cartão <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="text" 
+                        id="card-number" 
+                        name="card-number" 
+                        placeholder="0000 0000 0000 0000" 
+                        required 
+                        autocomplete="cc-number"
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="card-name">Nome no Cartão <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="text" 
+                        id="card-name" 
+                        name="card-name" 
+                        placeholder="Digite o nome como está no cartão" 
+                        required 
+                        autocomplete="cc-name"
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expiry-date">Data de Validade <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="text" 
+                        id="expiry-date" 
+                        name="expiry-date" 
+                        placeholder="MM/AA" 
+                        required 
+                        autocomplete="cc-exp"
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV <span aria-label="campo obrigatório">*</span></label>
+                    <input 
+                        type="text" 
+                        id="cvv" 
+                        name="cvv" 
+                        placeholder="000" 
+                        required 
+                        autocomplete="cc-csc"
+                        aria-required="true"
+                    >
+                </div>
+
+                <!-- Botão de Submit -->
+                <button type="submit" class="button" aria-label="Finalizar compra">
+                    Finalizar Compra
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Curso de Desenvolvedor Front-End. Todos os direitos reservados - Autoria de Stanley Sampaio Falcão.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/checkout.js"></script>
+</body>
+</html>

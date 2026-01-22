@@ -1,0 +1,146 @@
+/* ===========================
+   CHECKOUT ESPECÍFICO
+   =========================== */
+
+/* Herda variáveis do style.css */
+@import url('style.css');
+
+/* ===========================
+   FORMULÁRIO DE CHECKOUT
+   =========================== */
+.checkout-form {
+    background-color: var(--bg-green);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    max-width: 600px;
+    margin: 2rem auto;
+    color: var(--text-light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.checkout-form h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* ===========================
+   FORM GROUPS
+   =========================== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.form-group input::placeholder {
+    color: var(--text-gray);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+.form-group input.error {
+    border-color: #ff0000;
+}
+
+/* ===========================
+   BOTÃO DE SUBMIT
+   =========================== */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+.checkout-form .divider {
+    border-top: 1px solid var(--primary-color);
+    margin: 2rem 0;
+}
+
+/* ===========================
+   PLANO SELECIONADO
+   =========================== */
+#plano-selecionado {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* ===========================
+   RESPONSIVIDADE CHECKOUT
+   =========================== */
+@media (max-width: 768px) {
+    .checkout-form {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .form-group input {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-form {
+        padding: 1rem;
+    }
+
+    .form-group input {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+}
